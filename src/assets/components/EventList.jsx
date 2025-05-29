@@ -10,12 +10,12 @@ const EventList = () => {
       if (res.ok) {
         const response = await res.json();
         console.log('API response:', response);
-        setEvents(response.result); // ✅ Här ligger listan
+        setEvents(response.result); 
       } else {
-        console.error("Fel från API:", res.status);
+        console.error("Something went wrong...", res.status);
       }
     } catch (error) {
-      console.error("Kunde inte hämta event:", error);
+      console.error("Could not get event:", error);
     }
   };
 
@@ -24,11 +24,11 @@ const EventList = () => {
   }, []);
 
   return (
-    <section id="events">
+    <div className="content-wrapper">
       {events.map(event => (
         <EventItem key={event.id} item={event} />
       ))}
-    </section>
+    </div>
   );
 };
 

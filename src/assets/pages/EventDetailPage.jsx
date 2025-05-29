@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import EventDetailsContent from '../components/EventDetailsContent'
+import Nav from '../components/Nav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const EventDetailPage = () => {
 
@@ -13,12 +17,12 @@ const EventDetailPage = () => {
         if (res.ok) {
           const response = await res.json();
           console.log('API response:', response);
-          setEvent(response.result); // ✅ Här ligger listan
+          setEvent(response.result); 
         } else {
-          console.error("Fel från API:", res.status);
+          console.error("Something went wrong...", res.status);
         }
       } catch (error) {
-        console.error("Kunde inte hämta event:", error);
+        console.error("Could not get event.", error);
       }
     };
   
@@ -27,10 +31,16 @@ const EventDetailPage = () => {
     }, []);
 
   return (
-    <div className="event-details">
-      <h1>{event.title}</h1>
-      <Link to={`/events/booking/${id}`}>Book Event</Link>
+      <div className='page-container'>
+          <div className="portal-wrapper">
+      <Nav />
+      <Header />
+      <main>
+        {event?.id && <EventDetailsContent item={event} />}
+      </main>
+      <Footer />
     </div>
+      </div>
   )
 }
 

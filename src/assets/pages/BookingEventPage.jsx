@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 
 
 //GLÖM INTE USE NAVIGATE FÖR ATT GÖRA EN REDIRECT
 
 const BookingEventPage = () => {
+  const navigate = useNavigate()
   const {id} = useParams()
   const [event, setEvent] = useState({})
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const BookingEventPage = () => {
             console.error("Something went wrong...", res.status);
           }
         } catch (error) {
-          console.error("Kunde inte hämta event:", error);
+          console.error("Could not get event:", error);
         }
       };
 
@@ -39,7 +40,7 @@ const BookingEventPage = () => {
       const handleSubmit = async (e) => {
         e.preventDefault();
       try {
-        const res = await fetch('https://assignment-bookingservice-eaesbsd8cydrgcfn.swedencentral-01.azurewebsites.net/api/bookings',
+        const res = await fetch('https://assignment-bookingservice-hpfyfha2c8ctfve5.swedencentral-01.azurewebsites.net/api/bookings',
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -50,6 +51,7 @@ const BookingEventPage = () => {
             console.error("Booking failed");
           } else {
             console.log("Booking successful");
+            navigate('/')
           }
         } catch (err) {
           console.error("Error submitting booking", err);

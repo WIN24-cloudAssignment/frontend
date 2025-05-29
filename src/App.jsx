@@ -1,6 +1,6 @@
 
 import { Routes, Route } from 'react-router-dom';
-import './App.css'
+import './assets/css/style.css'
 import EventPage from './assets/pages/EventPage';
 import EventDetailPage from './assets/pages/EventDetailPage';
 import BookingEventPage from './assets/pages/BookingEventPage';
