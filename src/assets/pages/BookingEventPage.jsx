@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 
 
-//GLÖM INTE USE NAVIGATE FÖR ATT GÖRA EN REDIRECT
-
 const BookingEventPage = () => {
   const navigate = useNavigate()
   const {id} = useParams()
@@ -61,6 +59,7 @@ const BookingEventPage = () => {
       useEffect(() => {
         getEvent();
       }, []);
+
   return (
    <div>
   <h1>Book Event - {event.title}</h1>

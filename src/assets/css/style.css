@@ -162,6 +162,17 @@ a {
   height: 100dvh;
 }
 
+.image-preview-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 2px dashed var(--border-color);
+  margin: auto;
+  cursor: pointer;
+}
 
 header {
   grid-area: header;
@@ -366,8 +377,8 @@ footer {
   border-radius: .75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   width: 100%;
-  max-width: 225px;
-  min-width: 225px;
+  max-width: 220px;
+  min-width: 220px;
 }
 
 .event-image {
@@ -463,12 +474,6 @@ footer {
 
 
 @media (min-width: 1400px) {
-  .content-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-items: start;
-  }
-
   .nav-wrapper {
     position: relative;
     flex-direction: column;
@@ -664,6 +669,23 @@ footer {
 }
 
 /* ------FORM----- */
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.circle.circle-gray {
+  color: var(--gray-60); ;
+  background-color: var(--gray-40); 
+}
 
 .form {
   .btn {

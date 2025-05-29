@@ -29,7 +29,7 @@ const EventDetailsContent = ({ item }) => {
         </div>
       </div>
 
-      <Link to={`/events/booking/${id}`} className="booking-btn">Book This Event</Link>
+      <Link to={`/events/booking/${id}`} className="nav-link">Book This Event →</Link>
     </div>
   )
 }

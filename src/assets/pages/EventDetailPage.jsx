@@ -36,6 +36,7 @@ const EventDetailPage = () => {
       <Nav />
       <Header />
       <main>
+        <Link to="/" className="nav-link">← Back to Events</Link>
         {event?.id && <EventDetailsContent item={event} />}
       </main>
       <Footer />
