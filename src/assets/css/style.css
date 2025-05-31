@@ -790,3 +790,16 @@ footer {
       }
     }
 }
+
+
+.success-wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  
+  .success-message {
+    font-size: 1.5rem;
+    color: var(--text-price-color);
+  }
+}

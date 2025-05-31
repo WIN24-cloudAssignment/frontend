@@ -48,7 +48,7 @@ const AddEventForm = () => {
                   </div>
                 </div>
                 <div className="mb-1">
-                  <label className="form-label" for="title">Title</label>
+                  <label className="form-label" htmlFor="title">Title</label>
                   <input 
                     name="title" 
                     type="text" 
@@ -60,7 +60,7 @@ const AddEventForm = () => {
                   />
                 </div>
                 <div className="mb-1">
-                  <label className="form-label" for="eventDate">Event Date</label>
+                  <label className="form-label" htmlFor="eventDate">Event Date</label>
                   <input 
                     name="eventDate" 
                     type="datetime-local" 
@@ -72,7 +72,7 @@ const AddEventForm = () => {
                   />
                 </div>
                 <div className="mb-1">
-                  <label className="form-label" for="location">Location</label>
+                  <label className="form-label" htmlFor="location">Location</label>
                   <input 
                     name="location" 
                     type="text" 
@@ -84,7 +84,7 @@ const AddEventForm = () => {
                   />
                 </div>
                 <div className="mb-1">
-                  <label className="form-label" for="description">Description</label>
+                  <label className="form-label" htmlFor="description">Description</label>
                   <textarea 
                     name="description"
                     className="form-input text-area" 
