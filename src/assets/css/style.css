@@ -564,6 +564,22 @@ footer {
   margin-bottom: 1rem;
 }
 
+.trash-flex {
+  display: flex;
+  justify-content: flex-end;
+  padding: .75rem;
+}
+
+.fa-trash {
+  cursor: pointer;
+  color: var(--mobile-header);
+    &:hover,
+  &:focus-visible {
+    color: var(--link-hover-color);
+  }
+}
+
+
 .event-detail-card {
   background-color: var(--gray-10);
   border-radius: 1rem;
