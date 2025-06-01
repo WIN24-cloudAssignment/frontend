@@ -33,7 +33,6 @@ const handleDelete = async () => {
   }
 };
 
-
   return (
     <div className="booking-wrapper">
       <div className="event-detail-card">
